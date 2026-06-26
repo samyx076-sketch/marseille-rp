@@ -1,193 +1,89 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marseille RP - Boutique Officielle</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marseille RP - Nova Life</title>
   <style>
-    * { box-sizing: border-box; scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #050814;
-      color: white;
-    }
-
-    header {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 40px 20px;
-      background:
-        linear-gradient(rgba(2,6,23,.65), rgba(2,6,23,.95)),
-        url("https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1600&q=80");
-      background-size: cover;
-      background-position: center;
-    }
-
-    h1 {
-      font-size: 72px;
-      margin: 0;
-      text-transform: uppercase;
-    }
-
-    .subtitle {
-      font-size: 22px;
-      color: #dbeafe;
-      max-width: 750px;
-      margin: 20px auto;
-    }
-
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 15px 25px;
-      background: #2563eb;
-      color: white;
-      text-decoration: none;
-      border-radius: 12px;
-      font-weight: bold;
-      transition: 0.2s;
-    }
-
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 0 25px #2563eb;
-    }
-
-    .btn2 {
-      background: transparent;
-      border: 1px solid #60a5fa;
-    }
-
-    section {
-      padding: 70px 20px;
-      max-width: 1150px;
-      margin: auto;
-    }
-
-    h2 {
-      text-align: center;
-      font-size: 42px;
-      margin-bottom: 15px;
-    }
-
-    .desc {
-      text-align: center;
-      color: #bfdbfe;
-      margin-bottom: 40px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-    }
-
-    .card {
-      position: relative;
-      background: linear-gradient(180deg, #111827, #07101f);
-      border: 1px solid #1d4ed8;
-      border-radius: 20px;
-      padding: 28px;
-      text-align: center;
-      box-shadow: 0 0 35px rgba(37,99,235,.25);
-      overflow: hidden;
-    }
-
-    .popular {
-      border: 2px solid #facc15;
-    }
-
-    .ribbon {
-      position: absolute;
-      top: 18px;
-      right: -38px;
-      background: #facc15;
-      color: #111827;
-      padding: 7px 45px;
-      transform: rotate(35deg);
-      font-weight: bold;
-      font-size: 13px;
-    }
-
-    .card h3 {
-      color: #60a5fa;
-      font-size: 28px;
-    }
-
-    .old-price {
-      color: #94a3b8;
-      text-decoration: line-through;
-      font-size: 19px;
-    }
-
-    .price {
-      font-size: 38px;
-      font-weight: bold;
-      margin: 10px 0 18px;
-    }
-
-    ul {
-      text-align: left;
-      line-height: 1.9;
-      color: #e0f2fe;
-    }
-
-    .warning {
-      background: #0f172a;
-      border: 1px solid #1d4ed8;
-      border-radius: 16px;
-      padding: 25px;
-      text-align: center;
-      color: #bfdbfe;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #020617;
-      color: #94a3b8;
-    }
-
-    @media (max-width: 700px) {
-      h1 { font-size: 44px; }
-      .subtitle { font-size: 18px; }
-    }
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,sans-serif;background:#030712;color:white}
+    nav{position:fixed;top:0;width:100%;z-index:99;background:rgba(3,7,18,.8);backdrop-filter:blur(12px);display:flex;justify-content:space-between;align-items:center;padding:16px 8%;border-bottom:1px solid #1d4ed8}
+    nav b{color:#60a5fa;font-size:22px}
+    nav a{color:white;text-decoration:none;margin-left:18px;font-weight:bold}
+    header{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 20px 60px;background:radial-gradient(circle at top,#1d4ed8 0,#030712 45%,#000 100%)}
+    h1{font-size:78px;margin:0;text-transform:uppercase;text-shadow:0 0 30px #2563eb}
+    .subtitle{font-size:22px;color:#dbeafe;max-width:800px;margin:20px auto}
+    .btn{display:inline-block;margin:10px;padding:15px 26px;background:#2563eb;color:white;text-decoration:none;border-radius:14px;font-weight:bold;transition:.2s}
+    .btn:hover{transform:translateY(-4px);box-shadow:0 0 30px #2563eb}
+    .btn2{background:transparent;border:1px solid #60a5fa}
+    section{padding:80px 20px;max-width:1200px;margin:auto}
+    h2{text-align:center;font-size:44px;margin-bottom:10px}
+    .desc{text-align:center;color:#bfdbfe;margin-bottom:45px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px}
+    .card{position:relative;background:linear-gradient(180deg,#111827,#020617);border:1px solid #1d4ed8;border-radius:24px;padding:30px;text-align:center;box-shadow:0 0 35px rgba(37,99,235,.25);overflow:hidden}
+    .card:hover{transform:translateY(-6px);transition:.2s}
+    .popular{border:2px solid #facc15}
+    .ribbon{position:absolute;top:20px;right:-42px;background:#facc15;color:#111827;padding:8px 48px;transform:rotate(35deg);font-weight:bold;font-size:13px}
+    .card h3{font-size:30px;color:#60a5fa}
+    .old{text-decoration:line-through;color:#94a3b8;font-size:20px}
+    .price{font-size:42px;font-weight:bold;margin:8px 0 18px}
+    ul{text-align:left;line-height:1.9;color:#dbeafe}
+    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px}
+    .stat{background:#0f172a;border:1px solid #1e40af;border-radius:18px;padding:25px;text-align:center}
+    .stat strong{font-size:34px;color:#60a5fa}
+    .warning{background:#0f172a;border:1px solid #2563eb;border-radius:18px;padding:26px;text-align:center;color:#bfdbfe}
+    footer{text-align:center;background:#020617;color:#94a3b8;padding:35px}
+    @media(max-width:700px){h1{font-size:46px}nav{padding:14px 20px}nav a{display:none}.subtitle{font-size:18px}}
   </style>
 </head>
 <body>
+
+<nav>
+  <b>Marseille RP</b>
+  <div>
+    <a href="#boutique">Boutique</a>
+    <a href="#recrutement">Recrutement</a>
+    <a href="https://discord.gg/ghcGkgFVx9">Discord</a>
+  </div>
+</nav>
 
 <header>
   <div>
     <h1>Marseille RP</h1>
     <p class="subtitle">
-      Serveur Nova Life RP sérieux, immersif et communautaire.
-      Rejoins la ville, choisis ton métier et écris ton histoire.
+      Le serveur Nova Life RP nouvelle génération. Une ville sérieuse, immersive,
+      active et prête à accueillir les meilleurs joueurs.
     </p>
     <a class="btn" href="#boutique">Voir la boutique</a>
-    <a class="btn btn2" href="https://discord.gg/ghcGkgFVx9">Rejoindre le Discord</a>
+    <a class="btn btn2" href="https://discord.gg/ghcGkgFVx9">Rejoindre Discord</a>
   </div>
 </header>
 
+<section>
+  <h2>Statut du serveur</h2>
+  <p class="desc">Marseille RP ouvre bientôt ses portes.</p>
+  <div class="stats">
+    <div class="stat"><strong>🟢</strong><p>Serveur en préparation</p></div>
+    <div class="stat"><strong>24/7</strong><p>Hébergement prévu</p></div>
+    <div class="stat"><strong>RP</strong><p>Sérieux & communautaire</p></div>
+    <div class="stat"><strong>VIP</strong><p>Avantages équilibrés</p></div>
+  </div>
+</section>
+
 <section id="boutique">
   <h2>Boutique officielle</h2>
-  <p class="desc">🔥 Promotions de lancement pour financer l’hébergement du serveur 🔥</p>
+  <p class="desc">🔥 Promotions de lancement pour financer l’hébergement 🔥</p>
 
   <div class="cards">
-
     <div class="card">
       <h3>VIP</h3>
-      <div class="old-price">9,99€</div>
+      <div class="old">9,99€</div>
       <div class="price">4,99€</div>
       <ul>
         <li>Rôle VIP Discord</li>
         <li>Support prioritaire</li>
         <li>Bonus RP équilibré</li>
-        <li>Avantages serveur</li>
+        <li>Accès avantages serveur</li>
       </ul>
       <a class="btn" href="https://discord.gg/ghcGkgFVx9">Acheter</a>
     </div>
@@ -195,12 +91,12 @@
     <div class="card popular">
       <div class="ribbon">POPULAIRE</div>
       <h3>VIP Gold</h3>
-      <div class="old-price">19,99€</div>
+      <div class="old">19,99€</div>
       <div class="price">14,99€</div>
       <ul>
-        <li>Avantages VIP inclus</li>
+        <li>VIP inclus</li>
         <li>Véhicules premium</li>
-        <li>Tag spécial Discord</li>
+        <li>Tag Discord spécial</li>
         <li>Priorité support</li>
       </ul>
       <a class="btn" href="https://discord.gg/ghcGkgFVx9">Acheter</a>
@@ -208,7 +104,7 @@
 
     <div class="card">
       <h3>Pack Voitures</h3>
-      <div class="old-price">35,99€</div>
+      <div class="old">35,99€</div>
       <div class="price">24,99€</div>
       <ul>
         <li>Accès véhicules RP premium</li>
@@ -218,35 +114,26 @@
       </ul>
       <a class="btn" href="https://discord.gg/ghcGkgFVx9">Acheter</a>
     </div>
-
   </div>
 </section>
 
 <section>
   <h2>Récompenses automatiques</h2>
   <div class="warning">
-    Pour l’instant, le bouton “Acheter” envoie sur Discord.
-    Après, on remplacera les liens par Stripe ou PayPal.
-    Le paiement pourra donner automatiquement le rôle Discord.
-    Pour Nova Life en jeu, il faudra voir si ton hébergeur permet les plugins/API.
+    Pour l’instant les boutons envoient sur Discord.  
+    Après, on mettra Stripe ou PayPal. Le paiement pourra donner automatiquement
+    un rôle Discord. Pour les récompenses Nova Life en jeu, il faudra voir avec
+    ton hébergeur ou les fichiers/plugins du serveur.
   </div>
 </section>
 
-<section>
+<section id="recrutement">
   <h2>Recrutement RP</h2>
+  <p class="desc">Choisis ton métier et développe ton histoire.</p>
   <div class="cards">
-    <div class="card">
-      <h3>Police</h3>
-      <p>Maintiens l’ordre dans Marseille RP.</p>
-    </div>
-    <div class="card">
-      <h3>EMS</h3>
-      <p>Sauve les citoyens et gère les urgences.</p>
-    </div>
-    <div class="card">
-      <h3>Mécano</h3>
-      <p>Répare, customise et développe ton garage.</p>
-    </div>
+    <div class="card"><h3>🚓 Police</h3><p>Maintiens l’ordre dans Marseille RP.</p></div>
+    <div class="card"><h3>🚑 EMS</h3><p>Sauve les citoyens et gère les urgences.</p></div>
+    <div class="card"><h3>🔧 Mécano</h3><p>Répare, customise et développe ton garage.</p></div>
   </div>
 </section>
 
@@ -254,8 +141,8 @@
   <h2>Règlement boutique</h2>
   <p class="desc">
     Les achats servent à financer l’hébergement et le développement du serveur.
-    Aucun avantage ne doit casser l’équilibre RP.
-    En cas d’abus ou de non-respect du règlement, les avantages peuvent être retirés.
+    Aucun avantage ne doit casser l’équilibre RP. En cas d’abus, triche ou non-respect
+    du règlement, les avantages peuvent être retirés.
   </p>
 </section>
 
