@@ -18,10 +18,22 @@ function openPayment(product, priceText) {
     title.innerHTML = product;
     price.innerHTML = "<strong>" + priceText + "</strong>";
 
-    paypalBtn.href = PAYPAL_LINK;
-    stripeBtn.href = STRIPE_LINK;
+    // PayPal actif
+    paypalBtn.href = "https://paypal.me/AthanUhq";
+
+    // CB indisponible
+    stripeBtn.removeAttribute("href");
+    stripeBtn.innerHTML = "💳 Carte bancaire (Bientôt disponible)";
+    stripeBtn.style.opacity = "0.5";
+    stripeBtn.style.cursor = "not-allowed";
+
+    stripeBtn.onclick = function(e){
+        e.preventDefault();
+        alert("Le paiement par carte bancaire sera bientôt disponible.");
+    };
 
     modal.style.display = "flex";
+}
 
 }
 
