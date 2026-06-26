@@ -3,17 +3,17 @@ const productName = document.getElementById("productName");
 const productPrice = document.getElementById("productPrice");
 
 function openPayment(name, price) {
-  productName.textContent = name;
-  productPrice.textContent = price;
-  modal.style.display = "flex";
+    productName.innerText = name;
+    productPrice.innerText = price;
+    modal.style.display = "flex";
 }
 
 function closePayment() {
-  modal.style.display = "none";
+    modal.style.display = "none";
 }
 
-window.addEventListener("click", function(e) {
-  if (e.target === modal) {
-    closePayment();
-  }
-});
+window.onclick = function(event) {
+    if (event.target == modal) {
+        closePayment();
+    }
+};
