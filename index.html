@@ -1,172 +1,108 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marseille RP - Nova Life</title>
-
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marseille RP</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <nav class="navbar">
-    <div class="logo">MARSEILLE <span>RP</span></div>
+<nav>
+  <div class="logo">MARSEILLE <span>RP</span></div>
+  <a href="#accueil">Accueil</a>
+  <a href="#boutique">Boutique</a>
+  <a href="#reglement">Règlement</a>
+  <a href="#recrutement">Recrutement</a>
+  <a href="https://discord.gg/ghcGkgFVx9" target="_blank">Discord</a>
+</nav>
 
-    <div class="nav-links">
-      <a href="#accueil">Accueil</a>
-      <a href="#boutique">Boutique</a>
-      <a href="#recrutement">Recrutement</a>
-      <a href="https://discord.gg/ghcGkgFVx9" target="_blank">Discord</a>
+<header id="accueil">
+  <div class="hero">
+    <p class="tag">Serveur Nova Life RP</p>
+    <h1>Marseille RP</h1>
+    <p>Une ville RP sérieuse, immersive et communautaire.</p>
+    <a class="btn" href="#boutique">Boutique</a>
+    <a class="btn alt" href="https://discord.gg/ghcGkgFVx9" target="_blank">Discord</a>
+  </div>
+</header>
+
+<section id="boutique">
+  <h2>Boutique officielle</h2>
+  <p class="desc">🔥 Promotions de lancement 🔥</p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>💎 VIP</h3>
+      <p class="old">9,99€</p>
+      <p class="price">4,99€</p>
+      <p>Rôle VIP Discord, support prioritaire, bonus RP équilibré.</p>
+      <button onclick="openPayment('VIP', '4,99€')">Acheter</button>
     </div>
-  </nav>
 
-  <header id="accueil" class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-      <p class="tag">Serveur Nova Life RP</p>
-      <h1>Marseille RP</h1>
-      <p class="subtitle">
-        Une ville RP sérieuse, immersive et communautaire.
-        Deviens qui tu veux être dans les rues de Marseille.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="#boutique" class="btn primary">Voir la boutique</a>
-        <a href="https://discord.gg/ghcGkgFVx9" target="_blank" class="btn secondary">Rejoindre Discord</a>
-      </div>
+    <div class="card best">
+      <div class="badge">POPULAIRE</div>
+      <h3>👑 VIP Gold</h3>
+      <p class="old">19,99€</p>
+      <p class="price">14,99€</p>
+      <p>VIP inclus, véhicules premium, tag Discord spécial.</p>
+      <button onclick="openPayment('VIP Gold', '14,99€')">Acheter</button>
     </div>
-  </header>
 
-  <section class="stats">
-    <div class="stat-card">
-      <strong>🟢</strong>
-      <span>Serveur en préparation</span>
-    </div>
-    <div class="stat-card">
-      <strong>24/7</strong>
-      <span>Hébergement prévu</span>
-    </div>
-    <div class="stat-card">
-      <strong>RP</strong>
-      <span>Sérieux & immersif</span>
-    </div>
-    <div class="stat-card">
-      <strong>VIP</strong>
-      <span>Avantages équilibrés</span>
-    </div>
-  </section>
-
-  <section id="boutique" class="section">
-    <p class="section-tag">🔥 Promotions de lancement</p>
-    <h2>Boutique officielle</h2>
-    <p class="section-desc">
-      Soutiens Marseille RP et débloque des avantages sans casser l’équilibre du RP.
-    </p>
-
-    <div class="shop-grid">
-
-      <div class="shop-card">
-        <div class="shop-icon">💎</div>
-        <h3>VIP</h3>
-        <p class="old-price">9,99€</p>
-        <p class="price">4,99€</p>
-        <ul>
-          <li>Rôle VIP Discord</li>
-          <li>Support prioritaire</li>
-          <li>Bonus RP équilibré</li>
-          <li>Accès avantages serveur</li>
-        </ul>
-        <button class="buy-btn" onclick="openPayment('VIP', '4,99€')">Acheter</button>
-      </div>
-
-      <div class="shop-card popular">
-        <div class="ribbon">POPULAIRE</div>
-        <div class="shop-icon">👑</div>
-        <h3>VIP Gold</h3>
-        <p class="old-price">19,99€</p>
-        <p class="price">14,99€</p>
-        <ul>
-          <li>Avantages VIP inclus</li>
-          <li>Véhicules premium</li>
-          <li>Tag Discord spécial</li>
-          <li>Priorité support</li>
-        </ul>
-        <button class="buy-btn" onclick="openPayment('VIP Gold', '14,99€')">Acheter</button>
-      </div>
-
-      <div class="shop-card">
-        <div class="shop-icon">🏎️</div>
-        <h3>Pack Voitures</h3>
-        <p class="old-price">35,99€</p>
-        <p class="price">24,99€</p>
-        <ul>
-          <li>Véhicules RP premium</li>
-          <li>Validation staff obligatoire</li>
-          <li>Pas de véhicule abusé</li>
-          <li>Utilisation RP uniquement</li>
-        </ul>
-        <button class="buy-btn" onclick="openPayment('Pack Voitures', '24,99€')">Acheter</button>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="recrutement" class="section jobs">
-    <p class="section-tag">👮 Recrutement</p>
-    <h2>Métiers RP</h2>
-
-    <div class="job-grid">
-      <div class="job-card">
-        <h3>🚓 Police</h3>
-        <p>Maintiens l’ordre dans Marseille RP.</p>
-      </div>
-      <div class="job-card">
-        <h3>🚑 EMS</h3>
-        <p>Sauve les citoyens et gère les urgences.</p>
-      </div>
-      <div class="job-card">
-        <h3>🔧 Mécano</h3>
-        <p>Répare, customise et développe ton garage.</p>
-      </div>
-      <div class="job-card">
-        <h3>💼 Business</h3>
-        <p>Monte ton entreprise et domine l’économie locale.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section warning-section">
-    <h2>Récompenses automatiques</h2>
-    <p>
-      Les boutons peuvent envoyer vers PayPal, Stripe ou Discord.
-      Pour donner automatiquement les récompenses en jeu Nova Life,
-      il faudra vérifier les plugins/API disponibles sur ton hébergeur.
-    </p>
-  </section>
-
-  <footer>
-    © 2026 Marseille RP — Boutique officielle Nova Life
-  </footer>
-
-  <div id="paymentModal" class="modal">
-    <div class="modal-content">
-      <button class="close" onclick="closePayment()">×</button>
-      <h2 id="modalTitle">Acheter</h2>
-      <p id="modalPrice"></p>
-
-      <div class="payment-options">
-        <a id="paypalBtn" href="#" class="pay paypal">Payer avec PayPal</a>
-        <a id="stripeBtn" class="pay stripe">💳 Carte bancaire (Bientôt disponible)</a>
-        <a href="https://discord.gg/ghcGkgFVx9" target="_blank" class="pay discord">Ouvrir un ticket Discord</a>
-      </div>
-
-      <p class="modal-note">
-        Remplace les liens PayPal/CB dans <b>script.js</b> quand tu auras créé tes liens de paiement.
-      </p>
+    <div class="card">
+      <h3>🏎️ Pack Voitures</h3>
+      <p class="old">35,99€</p>
+      <p class="price">24,99€</p>
+      <p>Accès véhicules RP premium, validation staff obligatoire.</p>
+      <button onclick="openPayment('Pack Voitures', '24,99€')">Acheter</button>
     </div>
   </div>
+</section>
 
-  <script src="script.js"></script>
+<section id="reglement">
+  <h2>Règlement</h2>
+  <div class="rules">
+    <details open>
+      <summary>📜 Règlement général</summary>
+      <p>Respect obligatoire. Pas d’insultes abusives, pas de troll, pas de HRP vocal en scène.</p>
+    </details>
+    <details>
+      <summary>🚗 Code de la route</summary>
+      <p>Conduite RP obligatoire. Pas de conduite no fear, pas de crash volontaire.</p>
+    </details>
+    <details>
+      <summary>💰 Boutique</summary>
+      <p>Les achats financent le serveur. Aucun avantage ne doit casser l’équilibre RP.</p>
+    </details>
+    <details>
+      <summary>❌ Sanctions</summary>
+      <p>Tout abus peut entraîner retrait des avantages, kick, warn ou ban.</p>
+    </details>
+  </div>
+</section>
+
+<section id="recrutement">
+  <h2>Recrutement RP</h2>
+  <div class="cards">
+    <div class="card"><h3>🚓 Police</h3><p>Maintiens l’ordre.</p></div>
+    <div class="card"><h3>🚑 EMS</h3><p>Sauve les citoyens.</p></div>
+    <div class="card"><h3>🔧 Mécano</h3><p>Répare et customise.</p></div>
+  </div>
+</section>
+
+<footer>© 2026 Marseille RP — Nova Life</footer>
+
+<div id="modal" class="modal">
+  <div class="modal-box">
+    <button class="close" onclick="closePayment()">×</button>
+    <h2 id="productName"></h2>
+    <p id="productPrice"></p>
+    <a class="pay paypal" href="https://paypal.me/AthanUhq" target="_blank">Payer avec PayPal</a>
+    <a class="pay disabled">CB bientôt disponible</a>
+    <a class="pay discord" href="https://discord.gg/ghcGkgFVx9" target="_blank">Ticket Discord</a>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
